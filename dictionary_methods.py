@@ -54,8 +54,15 @@ personalDataDict = {
     "Email Address" : "jensennics.dlrs@gmail.com",
     "COVID 19 Vaccination Status" : "Fully Vaccinated"
     }
-print(personalDataDict)
 #4th Step: Add the condition
     #Option1
+if userInputFunct == 1:
+    name = input ("What is your Name? ")
+    age = int (input("How old are you? "))
+
+    #modifying existing item
+    personalDataDict ["Name"] = name
+    personalDataDict ["Age"] = age
+    print (personalDataDict)
     #Option2
     #Option3
