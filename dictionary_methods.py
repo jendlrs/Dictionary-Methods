@@ -98,7 +98,14 @@ while True:
         #display updated Info
         #Option2
     elif userInputFunct == 2:
-        print("option2")
+        nameSearch = input ("Please enter your full name: ")
+        for key, value in personalDataDict.items():
+            if key == nameSearch:
+        #display updated info
+                for key, value in personalDataDict [nameSearch].items():
+                    print (key, ":", value, "\n")
+            else: 
+                print("The name you entered did not match any of our records.")
         #option3
     elif userInputFunct == 3:
         exitVerification = input("Are you sure you want to exit? (Y/N) ")
