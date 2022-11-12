@@ -65,15 +65,6 @@ while True:
                     "Email Address" : "",
                     "COVID 19 Vaccination Status" : ""
                 },
-                "data3" : {
-                    "Name" : "Person3",
-                    "Age" : 1, #for int
-                    "Gender" : "",
-                    "Address" : "",
-                    "Phone Number" : "",
-                    "Email Address" : "",
-                    "COVID 19 Vaccination Status" : ""
-                }
             }
     if userInputFunct not in range (1,4):
         print ("\n=====Sorry you have entered an invalid input.===== \n            Please Enter 1 to 3 only.")
@@ -82,7 +73,7 @@ while True:
     elif userInputFunct == 1:
         name = input ("What is your Name? ")
         age = int (input("How old are you? "))
-        gender = input ("What is your Gender? (F/N) ")
+        gender = input ("What is your Gender? (F/M) ")
         address = input ("Where do you live? ")
         phoneNumber = input ("What is your phone number? ")
         emailAdd = input ("What is your email? ")
@@ -98,7 +89,6 @@ while True:
         personalDataDict ["data2"]["COVID 19 Vaccination Status"] = vaccineStatus
 
         print ("\n===-Personal Information is Saved-===\n")
-        print(personalDataDict)
         #display updated Info
         #Option2
     elif userInputFunct == 2:
@@ -111,12 +101,12 @@ while True:
                 for key, value in personalDataDict["data1"].items():
                     print(key, ":", value,"\n")
         #for data 2
-        for key, value in personalDataDict["data2"].items():
-            if value == nameSearch:
-                print ("\nThese are what we found: \n")
+            for key, value in personalDataDict["data2"].items():
+                if value == nameSearch:
+                    print ("\nThese are what we found: \n")
         #display updated Info
-                for key, value in personalDataDict["data2"].items():
-                    print(key, ":", value,"\n")
+                    for key, value in personalDataDict["data2"].items():
+                        print(key, ":", value,"\n")
         else: 
             print("The name you entered did not match any of our records.")
         #option3
