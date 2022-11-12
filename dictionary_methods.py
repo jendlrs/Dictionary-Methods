@@ -80,20 +80,25 @@ while True:
         vaccineStatus = input ("What is your COVID 19 Vaccine Status? ")
 
         #modifying existing item
-        personalDataDict ["data2"]["Name"] = name
-        personalDataDict ["data2"]["Age"] = age
-        personalDataDict ["data2"]["Gender"] = gender
-        personalDataDict ["data2"]["Address"] = address
-        personalDataDict ["data2"]["Phone Number"] = phoneNumber
-        personalDataDict ["data2"]["Email Address"] = emailAdd
-        personalDataDict ["data2"]["COVID 19 Vaccination Status"] = vaccineStatus
+        UpdateDict = dict({
+                "Name" : name,
+                "Age" : age, #for int
+                "Gender" : gender,
+                "Address" : address,
+                "Phone Number" : phoneNumber,
+                "Email Address" : emailAdd,
+                "COVID 19 Vaccination Status" : vaccineStatus
+                })
+        personalDataDict[name] = personalDataDict["Placeholder2"]
+        del personalDataDict["Placeholder2"]
+        personalDataDict[name].update(UpdateDict)
 
         print ("\n===-Personal Information is Saved-===\n")
         #display updated Info
         #Option2
     elif userInputFunct == 2:
         nameSearch = input ("Please enter your full name: ")
-        #for data 1
+                #for data 1
         for key, value in personalDataDict["data1"].items():
             if value == nameSearch:
                 print ("\nThese are what we found: \n")
