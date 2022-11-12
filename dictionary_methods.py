@@ -91,4 +91,8 @@ while True:
                 print(key, ":", value,"\n")
         #option3
     elif userInputFunct == 3:
-        print("Option 3")
+        exitVerification = input("Are you sure you want to exit? (Y/N) ")
+        if exitVerification == "Y":
+            print ("Thank you for using this program")
+        else:
+            continue
