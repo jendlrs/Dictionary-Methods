@@ -46,17 +46,19 @@ print ("====================")
 while True:
     userInputFunct = int(input ("\nWhat do you want to do? [Enter the corresponding number only \033[92m(1-3)\033[0m from the MENU]: "))
     #3rd Step: Declaring a Dictionary
-    if userInputFunct not in range (1,4):
-        print ("Sorry")
-        personalDataDict = {
-            "Name" : "Ma. Jensen Nicole C. Dela Rosa",
-            "Age" : 19,
-            "Gender" : "F",
-            "Address" : "Quezon City",
-            "Phone Number" : "09238271212",
-            "Email Address" : "jensennics.dlrs@gmail.com",
-            "COVID 19 Vaccination Status" : "Fully Vaccinated"
+    personalDataDict = {
+                "data1" : {
+                    "Name" : "Ma. Jensen Nicole C. Dela Rosa",
+                    "Age" : 19,
+                    "Gender" : "F",
+                    "Address" : "Quezon City",
+                    "Phone Number" : "09238271212",
+                    "Email Address" : "jensennics.dlrs@gmail.com",
+                    "COVID 19 Vaccination Status" : "Fully Vaccinated"
+                }
             }
+    if userInputFunct not in range (1,4):
+        print ("\n=====Sorry you have entered an invalid input.===== \n            Please Enter 1 to 3 only.")
     #4th Step: Add the condition
         #Option1
     elif userInputFunct == 1:
@@ -84,15 +86,18 @@ while True:
             print(key, ":", value,"\n")
         #Option2
     elif userInputFunct == 2:
-        name = input ("Please enter your full name: ")
-        if "Name" in personalDataDict:
-            print ("\nThese are what we found: \n")
-            for key, value in personalDataDict.items():
-                print(key, ":", value,"\n")
+        nameSearch = input ("Please enter your full name: ")
+        for key, value in personalDataDict["data1"].items():
+            if value == nameSearch:
+                print ("\nThese are what we found: \n")
+        #display updated Info
+                for key, value in personalDataDict["data1"].items():
+                    print(key, ":", value,"\n")
         #option3
     elif userInputFunct == 3:
         exitVerification = input("Are you sure you want to exit? (Y/N) ")
         if exitVerification == "Y":
             print ("Thank you for using this program")
+            break
         else:
             continue
