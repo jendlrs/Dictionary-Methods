@@ -74,9 +74,18 @@ if userInputFunct == 1:
     personalDataDict ["Email Address"] = emailAdd
     personalDataDict ["COVID 19 Vaccination Status"] = vaccineStatus
 
-print ("\n===-Personal Information is Saved-===\n")
+    print ("\n===-Personal Information is Saved-===\n")
     #display updated Info
-for key, value in personalDataDict.items():
-    print(key, ":", value)
+    print ("\nThese are the information we received:\n")
+    for key, value in personalDataDict.items():
+        print(key, ":", value,"\n")
     #Option2
-    #Option3
+elif userInputFunct == 2:
+    name = input ("Please enter your full name: ")
+    if "Name" in personalDataDict:
+        print ("\nThese are what we found: \n")
+        for key, value in personalDataDict.items():
+            print(key, ":", value,"\n")
+    #option3
+elif userInputFunct == 3:
+    print("Option 3")
