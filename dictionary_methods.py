@@ -74,7 +74,9 @@ if userInputFunct == 1:
     personalDataDict ["Email Address"] = emailAdd
     personalDataDict ["COVID 19 Vaccination Status"] = vaccineStatus
 
-    print ("===-Personal Information is Saved-===")
-    print (personalDataDict)
+print ("\n===-Personal Information is Saved-===\n")
+    #display updated Info
+for key, value in personalDataDict.items():
+    print(key, ":", value)
     #Option2
     #Option3
