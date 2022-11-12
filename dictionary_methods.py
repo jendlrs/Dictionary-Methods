@@ -42,9 +42,20 @@ print ("  1 --> Add an Item")
 print ("  2 --> Search")
 print ("  3 --> Exit\n")
 print ("====================")
-#Ask Input from the user 
+#2nd Step: Ask Input from the user 
 userInputFunct = int(input ("\nWhat do you want to do? [Enter the corresponding number only \033[92m(1-3)\033[0m from the MENU]: "))
-#Add the condition
+#3rd Step: Declaring a Dictionary
+personalDataDict = {
+    "Name" : "Ma. Jensen Nicole C. Dela Rosa",
+    "Age" : 19,
+    "Gender" : "F",
+    "Address" : "Quezon City",
+    "Phone Number" : "09238271212",
+    "Email Address" : "jensennics.dlrs@gmail.com",
+    "COVID 19 Vaccination Status" : "Fully Vaccinated"
+    }
+print(personalDataDict)
+#4th Step: Add the condition
     #Option1
     #Option2
     #Option3
