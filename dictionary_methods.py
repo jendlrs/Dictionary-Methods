@@ -43,6 +43,7 @@ print ("  2 --> Search")
 print ("  3 --> Exit\n")
 print ("====================")
 #Ask Input from the user 
+userInputFunct = int(input ("\nWhat do you want to do? [Enter the corresponding number only \033[92m(1-3)\033[0m from the MENU]: "))
 #Add the condition
     #Option1
     #Option2
