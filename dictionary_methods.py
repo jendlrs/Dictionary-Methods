@@ -59,10 +59,22 @@ personalDataDict = {
 if userInputFunct == 1:
     name = input ("What is your Name? ")
     age = int (input("How old are you? "))
+    gender = input ("What is your Gender? (F/N) ")
+    address = input ("Where do you live? ")
+    phoneNumber = input ("What is your phone number? ")
+    emailAdd = input ("What is your email? ")
+    vaccineStatus = input ("What is your COVID 19 Vaccine Status? ")
 
     #modifying existing item
     personalDataDict ["Name"] = name
     personalDataDict ["Age"] = age
+    personalDataDict ["Gender"] = gender
+    personalDataDict ["Address"] = address
+    personalDataDict ["Phone Number"] = phoneNumber
+    personalDataDict ["Email Address"] = emailAdd
+    personalDataDict ["COVID 19 Vaccination Status"] = vaccineStatus
+
+    print ("===-Personal Information is Saved-===")
     print (personalDataDict)
     #Option2
     #Option3
