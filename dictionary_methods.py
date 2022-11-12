@@ -55,6 +55,24 @@ while True:
                     "Phone Number" : "09238271212",
                     "Email Address" : "jensennics.dlrs@gmail.com",
                     "COVID 19 Vaccination Status" : "Fully Vaccinated"
+                },
+                "data2" : {
+                    "Name" : "Person2",
+                    "Age" : 1, #for int
+                    "Gender" : "",
+                    "Address" : "",
+                    "Phone Number" : "",
+                    "Email Address" : "",
+                    "COVID 19 Vaccination Status" : ""
+                },
+                "data3" : {
+                    "Name" : "Person3",
+                    "Age" : 1, #for int
+                    "Gender" : "",
+                    "Address" : "",
+                    "Phone Number" : "",
+                    "Email Address" : "",
+                    "COVID 19 Vaccination Status" : ""
                 }
             }
     if userInputFunct not in range (1,4):
@@ -71,33 +89,41 @@ while True:
         vaccineStatus = input ("What is your COVID 19 Vaccine Status? ")
 
         #modifying existing item
-        personalDataDict ["Name"] = name
-        personalDataDict ["Age"] = age
-        personalDataDict ["Gender"] = gender
-        personalDataDict ["Address"] = address
-        personalDataDict ["Phone Number"] = phoneNumber
-        personalDataDict ["Email Address"] = emailAdd
-        personalDataDict ["COVID 19 Vaccination Status"] = vaccineStatus
+        personalDataDict ["data2"]["Name"] = name
+        personalDataDict ["data2"]["Age"] = age
+        personalDataDict ["data2"]["Gender"] = gender
+        personalDataDict ["data2"]["Address"] = address
+        personalDataDict ["data2"]["Phone Number"] = phoneNumber
+        personalDataDict ["data2"]["Email Address"] = emailAdd
+        personalDataDict ["data2"]["COVID 19 Vaccination Status"] = vaccineStatus
 
         print ("\n===-Personal Information is Saved-===\n")
+        print(personalDataDict)
         #display updated Info
-        print ("\nThese are the information we received:\n")
-        for key, value in personalDataDict.items():
-            print(key, ":", value,"\n")
         #Option2
     elif userInputFunct == 2:
         nameSearch = input ("Please enter your full name: ")
+        #for data 1
         for key, value in personalDataDict["data1"].items():
             if value == nameSearch:
                 print ("\nThese are what we found: \n")
         #display updated Info
                 for key, value in personalDataDict["data1"].items():
                     print(key, ":", value,"\n")
+        #for data 2
+        for key, value in personalDataDict["data2"].items():
+            if value == nameSearch:
+                print ("\nThese are what we found: \n")
+        #display updated Info
+                for key, value in personalDataDict["data2"].items():
+                    print(key, ":", value,"\n")
+        else: 
+            print("The name you entered did not match any of our records.")
         #option3
     elif userInputFunct == 3:
         exitVerification = input("Are you sure you want to exit? (Y/N) ")
         if exitVerification == "Y":
-            print ("Thank you for using this program")
+            print ("\nThank you for using this program")
             break
         else:
             continue
